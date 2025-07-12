@@ -8,29 +8,26 @@ document.querySelector('#Menu').onclick = (e) => {
     e.preventDefault();
 };
 
-// Toggle class active untuk "Search Form"
-const searchForm = document.querySelector('.search-form');
-const searchBox = document.querySelector('#search-box');
-
-document.querySelector('#search-button').onclick = (e) => {
-    searchForm.classList.toggle('active');
-    searchBox.focus();
-    e.preventDefault();
-};
-
-//Klik diluar elemen menu
+//Klik diluar elemen Menu
 const Menu =  document.querySelector ('#Menu');
-const Search =  document.querySelector ('#search-button');
 
 document.addEventListener('click', function(e) {
     if(!Menu.contains(e.target)&&!navbarNav.contains(e.target)) {
         navbarNav.classList.remove('active');
     }
 
-    if(!Search.contains(e.target)&&!searchForm.contains(e.target)) {
-        searchForm.classList.remove('active');
-    }
 });
+
+// Toggle class active untuk "Search Form"
+// const searchForm = document.querySelector('.search-form');
+// const searchBox = document.querySelector('#search-box');
+
+// document.querySelector('#search-button').onclick = (e) => {
+//     searchForm.classList.toggle('active');
+//     searchBox.focus();
+//     e.preventDefault();
+// };
+
 
 //Modal Box
 const itemDetailModal = document.querySelector('#item-detail-modal');

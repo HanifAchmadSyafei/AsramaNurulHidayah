@@ -88,7 +88,7 @@ body {
 
 
 /* Navbar search form */
-.navbar .search-form {
+/* .navbar .search-form {
   position: absolute;
   top: 100%;
   right: 5%;
@@ -119,7 +119,7 @@ body {
   margin-right: 1rem;
   color: #ffffff;
   padding-left: 0.1rem;
-}
+} */
 
 /* Hero Section */
 .Hero {
@@ -178,6 +178,7 @@ body {
 .contact,
 .products {
   padding: 10rem 7% 1.4rem;
+  color: rgb(74, 79, 81);
 }
 
 .about h2, 
@@ -195,32 +196,45 @@ body {
 .products h2 span {
   color:#099026
 }
-.about .row {
+.about .row, .about .row-satu, .about .row-dua {
   display: flex
 }
-.about .row .about-img {
+.about .row .about-img, 
+.about .row-satu .about-img-satu,
+.about .row-dua .about-img-dua {
 flex: 1 1 45rem;
 }
-.about .row .about-img img {
+
+.about .row .about-img img,
+.about .row-satu .about-img-satu img,
+.about .row-dua .about-img-dua img { 
   width: 70%;
   border-radius: 50%;
 }
-.about .row .content {
+.about .row .content, 
+.about .row-satu .content-satu, 
+.about .row-dua .content-dua { 
   text-align: left;
   flex: 1 1 35rem;
   padding: 2 1rem;
   color: var(--primary);
 }
-.about .row .content h3 {
+.about .row .content h3,
+.about .row-satu .content-satu h3, 
+.about .row-dua .content-dua h3 { 
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #099026;
 }
-.about .row .content p {
+
+.about .row .content p,
+.about .row-satu .content-satu p, 
+.about .row-dua .content-dua p { 
   margin-bottom: 0.8rem;
   font-size: 1rem;
   font-weight: 400;
   line-break: 1.5;
+  text-align: left;
 }
 
 /* Menu Section */
@@ -272,6 +286,7 @@ flex: 1 1 45rem;
   text-align: center;
   border: 1px solid black;
   padding: 2rem;
+  border-radius: 5%;
 }
 
 .products .products-icons,
@@ -309,10 +324,12 @@ padding: 0.5rem 0;
 
 .products .products-image img {
   height: 15rem;
+  border-radius: 5%;
 }
 .products .products-image-satu img {
   height: 15rem;
   width: 25rem;
+  border-radius: 5%;
 }
 
 .products .product-content,
@@ -459,6 +476,7 @@ footer .credit a {
   height: 15rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  border-radius: 5%;
 }
 
 .modal-content p {
@@ -515,9 +533,10 @@ footer .credit a {
 }
 
 .modal-content-1 img {
-  height: 15rem;
+  height: 13rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
+  border-radius: 5%;
 }
 
 .modal-content-1 p {
@@ -595,11 +614,12 @@ footer .credit a {
   font-size: 1.5rem;
 }
 
-.about .row {
+.about .row, .about .row-satu {
   flex-wrap: wrap;
 }
 
-.about .row .about-img img {
+.about .row .about-img img,
+.about .row-satu .about-img-satu img {
   width: 50%;
   border-radius: 50%;
   object-fit: cover;
@@ -609,16 +629,19 @@ footer .credit a {
 
 }
 
-.about .row .content{
+.about .row .content,
+.about .row-satu .content-satu {
   padding: 0;
 }
 
-.about .row .content h3 {
+.about .row .content h3,
+.about .row-satu .content-satu h3 {
   margin-top: 1rem;
   font-size: 2rem;
 }
 
-.about .row .content p {
+.about .row .content p,
+.about .row-satu .content-satu p {
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -654,8 +677,30 @@ footer .credit a {
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
-    
+    font-size: 55%; 
+  }
+  .about .row .about-img img,
+  .about .row-satu .about-img-satu img {
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 10rem;
+  }
+  .modal-content img {
+    height: 15rem;
+    width: max-content;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    border-radius: 7%;
+    position: center;
+  }
+  .modal-content-1 img {
+    height: 20rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 25%;
+    border-radius: 9%;
   }
 }
 
