@@ -205,12 +205,21 @@ body {
 flex: 1 1 45rem;
 }
 
-.about .row .about-img img,
-.about .row-satu .about-img-satu img,
-.about .row-dua .about-img-dua img { 
+.about .row .about-img img {
   width: 70%;
   border-radius: 50%;
 }
+
+.about .row-satu .about-img-satu img,
+.about .row-dua .about-img-dua img {
+  width: 300px;
+  height: auto;
+  margin-left: 6.5rem;
+  object-fit: cover;
+  border-radius: 2rem; /* sudut membulat */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* bayangan lembut */
+}
+
 .about .row .content, 
 .about .row-satu .content-satu, 
 .about .row-dua .content-dua { 
@@ -219,6 +228,7 @@ flex: 1 1 45rem;
   padding: 2 1rem;
   color: var(--primary);
 }
+
 .about .row .content h3,
 .about .row-satu .content-satu h3, 
 .about .row-dua .content-dua h3 { 
@@ -259,15 +269,34 @@ flex: 1 1 45rem;
   justify-content: center;
 }
 
-.menu .row .menu-card {
+/* .menu .row .menu-card {
   text-align: center;
   padding-bottom: 2rem;
 }
 
 .menu .row .menu-card-img {
-  border-radius : 50%;
   width : 30%;
+  border-radius: 50%;
+  display: flex;
+} */
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 2rem;
+  width: 200px;
+  margin: 0 1rem;
 }
+
+
+.menu .row .menu-card-img {
+  border-radius: 50%;
+  width: 150px; /* Ukuran tetap */
+  height: 150px;
+  object-fit: cover; /* Penting agar gambar tidak gepeng */
+  display: block;
+  margin: 0 auto; /* Pusatkan gambar */
+}
+
 
 .menu .row .menu-card .menu-card-title {
   margin: 1.5rem auto 1rem;
@@ -443,11 +472,15 @@ footer .credit a {
   position: relative;
   background-color: #fefefe;
   color: var(--bg);
-  margin: 15% auto;
-  padding: 1.2rem;
+  margin: 10% auto;
+  padding: 1rem;
   border: 1px solid #666;
-  width: 80%;
+  width: 90%; /* ubah dari 80% agar lebih kecil */
+  max-width: 800px; /* batas maksimal ukuran modal */
+  border-radius: 1rem;
   animation: animateModal 0.5s;
+  height: auto;
+  text-align: center;
 }
 
 /* Modal Animation */
@@ -473,10 +506,16 @@ footer .credit a {
 }
 
 .modal-content img {
-  height: 15rem;
+  /* height: 15rem;
   margin-right: 2rem;
   margin-bottom: 2rem;
-  border-radius: 5%;
+  border-radius: 5%; */
+  width: 50%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: cover;
+  position: relative;
+  margin-top: 7.5%;
 }
 
 .modal-content p {
@@ -484,6 +523,8 @@ footer .credit a {
   line-height: 1.8rem;
   margin-top: 1.2rem;
 }
+
+
 
 /* Modal Box-1 */
 /* Item Detail-1 */
@@ -503,11 +544,14 @@ footer .credit a {
   position: relative;
   background-color: #fefefe;
   color: var(--bg);
-  margin: 15% auto;
-  padding: 1.2rem;
+  margin: 10% auto;
+  padding: 1rem;
   border: 1px solid #666;
-  width: 80%;
+  width: 90%; /* ubah dari 80% agar lebih kecil */
+  max-width: 400px; /* batas maksimal ukuran modal */
+  border-radius: 1rem;
   animation: animateModal 0.5s;
+  height: auto;
 }
 
 /* Modal Animation */
@@ -562,6 +606,8 @@ footer .credit a {
     font-size: 62.5%;
     
   }
+}
+
 
   #Menu {
     display: inline-block;
@@ -614,12 +660,12 @@ footer .credit a {
   font-size: 1.5rem;
 }
 
-.about .row, .about .row-satu {
+.about .row {
   flex-wrap: wrap;
 }
 
-.about .row .about-img img,
-.about .row-satu .about-img-satu img {
+
+.about .row .about-img img {
   width: 50%;
   border-radius: 50%;
   object-fit: cover;
@@ -629,19 +675,30 @@ footer .credit a {
 
 }
 
-.about .row .content,
-.about .row-satu .content-satu {
+.about .row-satu .about-img-satu img,
+.about .row-dua .about-img-dua img {
+    width: 80%;
+    max-width: 300px;
+    margin: auto;
+}
+
+
+.about .row .content {
   padding: 0;
 }
 
-.about .row .content h3,
-.about .row-satu .content-satu h3 {
+.about .row .content h3 {
   margin-top: 1rem;
   font-size: 2rem;
 }
 
+.about .row-dua .content-dua h3 {
+  padding-top: 20%;
+}
+
 .about .row .content p,
-.about .row-satu .content-satu p {
+.about .row-satu .content-satu p,
+.about .row-dua .content-dua p {
   font-size: 1.5rem;
   font-weight: 400;
 }
@@ -657,7 +714,7 @@ footer .credit a {
   padding-top: 0;
 }
 
-.modal-content, .modal-content-1 {
+/* .modal-content, .modal-content-1 {
   flex-wrap: wrap;
 }
 
@@ -666,12 +723,43 @@ footer .credit a {
   margin-right: 2rem;
   margin-bottom: 2rem;
   border-radius: 9%;
-}
+} */
 
-}
+  .modal-container,
+  .modal-container-1 {
+    width: 90%;
+    max-width: 350px;
+    padding: 1rem;
+  }
 
+  .modal-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    position: relative;
+    right: -9px;
+  }
 
+  .modal-content-1 img {
+    display: block;
+    width: 80%;          
+    border-radius: 1rem; 
+    position: relative;
+    left: -25px;
+  }
 
+  .modal-content,
+  .modal-content-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-content p,
+  .modal-content-1 p {
+    font-size: 1rem;
+    text-align: center;
+  }
 
 
 /* Mobile Phone */
@@ -679,12 +767,12 @@ footer .credit a {
   html {
     font-size: 55%; 
   }
-  .about .row .about-img img,
-  .about .row-satu .about-img-satu img {
+  .about .row .about-img img {
     width: 50%;
     border-radius: 50%;
     margin-left: 10rem;
   }
+
   .modal-content img {
     height: 15rem;
     width: max-content;
@@ -702,7 +790,5 @@ footer .credit a {
     margin-left: 25%;
     border-radius: 9%;
   }
+
 }
-
-
-
