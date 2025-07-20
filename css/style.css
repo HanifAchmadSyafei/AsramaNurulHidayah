@@ -226,9 +226,9 @@ flex: 1 1 45rem;
 }
 
 .about .row .about-img img {
-  width: 70%;
+  width: 50%;
   border-radius: 50%;
-  justify-content: center;
+  justify-content: left;
   display: flex;
 }
 
@@ -321,6 +321,7 @@ flex: 1 1 45rem;
   padding-bottom: 2rem;
   width: 200px;
   margin: 0 1rem;
+  margin-bottom: 5%;
 }
 
 
@@ -331,6 +332,7 @@ flex: 1 1 45rem;
   object-fit: cover; /* Penting agar gambar tidak gepeng */
   display: block;
   margin: 0 auto; /* Pusatkan gambar */
+  overflow: hidden;
 }
 
 
@@ -390,6 +392,7 @@ padding: 0.5rem 0;
 .products .products-image img {
   height: 15rem;
   border-radius: 5%;
+  margin-top: -1%;
 }
 .products .products-image-satu img {
   height: 15rem;
@@ -554,7 +557,16 @@ footer .credit a {
   object-fit: cover;
   position: relative;
   margin-top: 7.5%;
+  justify-content: center;
+  margin-left: 2rem;
+  margin-right: 4rem;
+  margin-top: 10%;
 }
+
+.modal .modal-content h3 {
+  margin-top: 5%;
+}
+
 
 .modal-content p {
   font-size: 1.2rem;
@@ -617,8 +629,14 @@ footer .credit a {
 .modal-content-1 img {
   height: 13rem;
   margin-right: 2rem;
+  margin-left: 6rem;
   margin-bottom: 2rem;
   border-radius: 5%;
+  justify-content: center;
+}
+
+.modal .modal-content-1 h3 {
+  margin-top: 5%;
 }
 
 .modal-content-1 p {
@@ -714,14 +732,22 @@ footer .credit a {
   object-position: center;
   padding: 0.5px;
   margin: 0px 0px 0px 100px;
-
+  display: block;
+  margin-left: 25%;
 }
 
-.about .row-satu .about-img-satu img,
-.about .row-dua .about-img-dua img {
+.about .row-satu .about-img-satu img {
     width: 80%;
     max-width: 300px;
     margin: auto;
+    margin-top: 7%;
+}
+
+.about .row-dua .about-img-dua img {
+  width: 80%;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20%;
 }
 
 
@@ -819,7 +845,7 @@ footer .credit a {
   .modal-content img {
     height: 15rem;
     width: max-content;
-    margin-right: 2rem;
+    margin-right: 3.5rem;
     margin-bottom: 2rem;
     margin-top: 5rem;
     border-radius: 7%;
@@ -929,7 +955,7 @@ footer .credit a {
   .navbar .navbar-nav a {
     display: block;
     margin: 1rem 0;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
   }
 
   #Menu {
