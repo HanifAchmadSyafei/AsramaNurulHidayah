@@ -791,42 +791,5 @@ footer .credit a {
     border-radius: 9%;
   }
 
-  .products h2 {
-    font-size: 1.8rem;
-  }
-
-  .products p {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .products .product-content h3,
-  .products .product-content-satu h3 {
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-  }
-
-  .contact h2 {
-    font-size: 2rem;
-  }
-
-  .contact p {
-    font-size: 1rem;
-  }
-
-  .menu-card-title {
-    font-size: 1.2rem !important;
-  }
-
-  .products .products-card,
-  .products .products-card-satu {
-    padding: 1.5rem;
-  }
-
-  .products .products-image img,
-  .products .products-image-satu img {
-    height: 12rem;
-    width: 100%;
-  }
 
 }
