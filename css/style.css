@@ -390,14 +390,29 @@ padding: 0.5rem 0;
 }
 
 .products .products-image img {
-  height: 15rem;
+  /* height: 15rem;
   border-radius: 5%;
   margin-top: -1%;
+  overflow-x: hidden; */
+  width: 100%;               /* Penuhi lebar kontainer */
+  height: auto;              /* Tinggi menyesuaikan agar proporsional */
+  max-height: 200px;         /* Batasi tinggi maksimum jika perlu */
+  object-fit: cover;         /* Potong gambar jika perlu agar rapi */
+  object-position: center;   /* Fokus di tengah gambar */
+  border-radius: 1rem;       /* Sudut membulat */
+  display: block;
 }
 .products .products-image-satu img {
-  height: 15rem;
+  /* height: 15rem;
   width: 25rem;
-  border-radius: 5%;
+  border-radius: 5%; */
+  width: 100%;               /* Penuhi lebar kontainer */
+  height: auto;              /* Tinggi menyesuaikan agar proporsional */
+  max-height: 200px;         /* Batasi tinggi maksimum jika perlu */
+  object-fit: cover;         /* Potong gambar jika perlu agar rapi */
+  object-position: center;   /* Fokus di tengah gambar */
+  border-radius: 1rem;       /* Sudut membulat */
+  display: block;
 }
 
 .products .product-content,
@@ -472,7 +487,19 @@ footer .socials a {
   margin: 1rem;
 }
 
+/* Khusus TikTok biar sejajar */
+footer .tiktok-icon i.bi-tiktok {
+  font-size: 20px;
+  position: relative;
+  top: -9px; /* Naikkan agar sejajar */
+  display: inline-block;
+  vertical-align: middle;
+  color: #fff;
+}
+
+
 footer .socials a:hover,
+footer .socials i:hover,
 footer .links a:hover {
   color: var(--primary);
 }
@@ -632,7 +659,7 @@ footer .credit a {
   margin-left: 6rem;
   margin-bottom: 2rem;
   border-radius: 5%;
-  justify-content: center;
+  justify-content: center;  
 }
 
 .modal .modal-content-1 h3 {
@@ -812,10 +839,25 @@ footer .credit a {
 
   .modal-content-1 img {
     display: block;
-    width: 80%;          
+    width: 50%;          
     border-radius: 1rem; 
     position: relative;
     left: -25px;
+    object-fit: cover;
+    /* margin-right: 3.5rem;
+    margin-bottom: 3.5rem;
+    margin-top: 3.5rem;
+    margin-left: 15%;
+
+    width: 50%;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: cover;        
+    object-position: center;
+    justify-content: center;  
+    border-radius: 1rem;
+    display: block; */
   }
 
   .modal-content,
@@ -852,12 +894,21 @@ footer .credit a {
     position: center;
   }
   .modal-content-1 img {
-    height: 20rem;
     margin-right: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
     margin-left: 25%;
-    border-radius: 9%;
+
+    width: 50%;
+    height: auto;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: cover;        
+    object-position: center;
+    justify-content: center;  
+    border-radius: 1rem;
+    display: block;
+    /* margin: 0 auto;  */
   }
 
 }
