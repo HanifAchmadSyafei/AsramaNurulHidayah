@@ -259,7 +259,7 @@ flex: 1 1 45rem;
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #099026;
-  text-align: center;
+  text-align: justify;
 }
 
 .about .row .content p,
@@ -269,7 +269,7 @@ flex: 1 1 45rem;
   font-size: 1rem;
   font-weight: 400;
   line-break: 1.5;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Menu Section */
@@ -421,6 +421,10 @@ padding: 0.5rem 0;
   color: #099026;
 }
 
+.products p {
+  text-align: center;
+}
+
 
 /* Contact Section */
 .contact .row {
@@ -432,7 +436,7 @@ padding: 0.5rem 0;
 }
 
 .contact .row .map {
-  flex: 1 1 50rem;
+  flex: 1 1 65rem;
   width: 100%;
   object-fit: cover;
   border-radius: 5rem;
@@ -441,9 +445,10 @@ padding: 0.5rem 0;
 
 
 .contact .row form {
-  flex: 1 1 50rem;
+  flex: 1 1 65rem;
   padding: 5rem 2rem;
   text-align: center;
+  object-fit: cover;
 }
 
 .contact .row form .input-group input {
@@ -587,18 +592,26 @@ footer .credit a {
   justify-content: center;
   margin-left: 2rem;
   margin-right: 4rem;
-  margin-top: 10%;
+  margin-top: 9%;
 }
 
 .modal .modal-content h3 {
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 
 .modal-content p {
   font-size: 1.2rem;
   line-height: 1.8rem;
-  margin-top: 1.2rem;
+  margin-top: 1.5%;
+}
+
+.modal .modal-content .product-content p {
+  text-align: justify;
+}
+
+.product-content, .product-content-1 h3 {
+  text-align: center;
 }
 
 
@@ -624,11 +637,14 @@ footer .credit a {
   margin: 10% auto;
   padding: 1rem;
   border: 1px solid #666;
-  width: 90%; /* ubah dari 80% agar lebih kecil */
-  max-width: 400px; /* batas maksimal ukuran modal */
+  width: 90%; /*ubah dari 80% agar lebih kecil  */
+  max-width: 400px;   /* batas maksimal ukuran modal  */
   border-radius: 1rem;
   animation: animateModal 0.5s;
   height: auto;
+  min-height: 27.5rem;
+  min-width:min-content;
+  object-fit: cover; 
 }
 
 /* Modal Animation */
@@ -654,22 +670,24 @@ footer .credit a {
 }
 
 .modal-content-1 img {
-  height: 13rem;
+  height: 11rem;
   margin-right: 2rem;
   margin-left: 6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.7rem;
   border-radius: 5%;
-  justify-content: center;  
+  justify-content: center;
+  margin-top: -2.5rem; 
 }
 
-.modal .modal-content-1 h3 {
-  margin-top: 5%;
+.modal-1 .product-content-1 h3 {
+  margin-bottom: 0rem;
 }
 
-.modal-content-1 p {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-  margin-top: 1.2rem;
+.modal-1 .product-content-1 p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1.5%;
+  text-align: justify;
 }
 
 /* Media Queries */
@@ -1013,6 +1031,14 @@ footer .credit a {
     display: inline-block; /* Hamburger muncul di mobile */
     color: #fff;
     cursor: pointer;
+  }
+
+  .modal-container,
+  .modal-container-1 {
+    width: 90%;
+    max-width: 350px;
+    padding: 1rem;
+    margin-bottom: 70%;
   }
 }
 
