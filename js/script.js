@@ -88,10 +88,11 @@ window.onclick = (e) => {
   var noWA = "6285921510750"; 
 
   var pesan = 
-    "*Formulir Asrama Nurul Hidayah*%0A" +
+    "Assalamualaikum Admin" +
     "Nama: " + nama + "%0A" +
     "Email: " + email + "%0A" +
     "No HP: " + telepon;
+    "Saya ingin konsultasi terkait Pondok"
 
   var url = "https://wa.me/" + noWA + "?text=" + pesan;
   window.open(url, "_blank");
