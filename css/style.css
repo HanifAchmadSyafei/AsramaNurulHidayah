@@ -247,7 +247,7 @@ flex: 1 1 45rem;
 .about .row .content, 
 .about .row-satu .content-satu, 
 .about .row-dua .content-dua { 
-  text-align: left;
+  text-align: justify;
   flex: 1 1 35rem;
   padding: 2 1rem;
   color: var(--primary);
@@ -259,7 +259,7 @@ flex: 1 1 45rem;
   font-size: 2rem;
   margin-bottom: 1rem;
   color: #099026;
-  text-align: justify;
+  text-align: center;
 }
 
 .about .row .content p,
@@ -269,7 +269,7 @@ flex: 1 1 45rem;
   font-size: 1rem;
   font-weight: 400;
   line-break: 1.5;
-  text-align: left;
+  hyphens: auto;
 }
 
 /* Menu Section */
@@ -608,6 +608,7 @@ footer .credit a {
 
 .modal .modal-content .product-content p {
   text-align: justify;
+  font-size: 1rem;
 }
 
 .product-content, .product-content-1 h3 {
@@ -1039,6 +1040,19 @@ footer .credit a {
     max-width: 350px;
     padding: 1rem;
     margin-bottom: 70%;
+  }
+
+  .modal .modal-content .product-content p {
+    font-size: 1.25rem;
+  }
+  .modal-content-1 .product-content-1 p {
+    font-size: 1.25rem;
+  }
+  .modal .modal-content .product-content h3 {
+    font-size: 1.4rem;
+  }
+  .modal-content-1 .product-content-1 h3 {
+    font-size: 1.4rem;
   }
 }
 
