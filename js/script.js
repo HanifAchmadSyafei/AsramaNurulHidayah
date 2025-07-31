@@ -87,7 +87,7 @@ window.onclick = (e) => {
     const pesan = `Assalamualaikum Admin Asrama Nurul Hidayah
     %0A%0ANama: ${nama}%0AEmail: ${email}%0ANomor HP: ${telepon}` `Saya ingin konsultasi min`;
 
-    const noAdmin = "6283872261184"; // GANTI dengan nomor admin tanpa +, awali dengan 62
+    const noAdmin = "6285921510750"; // GANTI dengan nomor admin tanpa +, awali dengan 62
 
     window.open(`https://wa.me/${noAdmin}?text=${pesan}`, "_blank");
   };
