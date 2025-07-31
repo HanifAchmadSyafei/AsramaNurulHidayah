@@ -88,11 +88,11 @@ window.onclick = (e) => {
   var noWA = "6285921510750"; 
 
   var pesan = 
-    "Assalamualaikum Admin" +
+    "Assalamualaikum Admin %0A" +
     "Nama: " + nama + "%0A" +
     "Email: " + email + "%0A" +
-    "No HP: " + telepon;
-    "Saya ingin konsultasi terkait Pondok"
+    "No HP: " + telepon
+    "Saya ingin konsultasi terkait Pondok %0A";
 
   var url = "https://wa.me/" + noWA + "?text=" + pesan;
   window.open(url, "_blank");
