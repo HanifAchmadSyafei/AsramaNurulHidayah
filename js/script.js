@@ -79,18 +79,24 @@ window.onclick = (e) => {
 };
 
 // Kirim pesan ke Admin
-  function sendToWhatsApp() {
-    const nama = document.getElementById("nama").value;
-    const email = document.getElementById("email").value;
-    const telepon = document.getElementById("telepon").value;
+ function sendToWhatsApp() {
+  var nama = document.getElementById("nama").value;
+  var email = document.getElementById("email").value;
+  var telepon = document.getElementById("telepon").value;
 
-    const pesan = `Assalamualaikum Admin Asrama Nurul Hidayah
-    %0A%0ANama: ${nama}%0AEmail: ${email}%0ANomor HP: ${telepon}` `Saya ingin konsultasi min`;
+  // Ganti dengan nomor WhatsApp kamu tanpa + atau 0 di depan
+  var noWA = "6285921510750"; 
 
-    const noAdmin = "6285921510750"; // GANTI dengan nomor admin tanpa +, awali dengan 62
+  var pesan = 
+    "*Formulir Asrama Nurul Hidayah*%0A" +
+    "Nama: " + nama + "%0A" +
+    "Email: " + email + "%0A" +
+    "No HP: " + telepon;
 
-    window.open(`https://wa.me/${noAdmin}?text=${pesan}`, "_blank");
-  };
+  var url = "https://wa.me/" + noWA + "?text=" + pesan;
+  window.open(url, "_blank");
+}
+
 
   // Scroll smooth manual (opsional)
 // document.querySelectorAll('a[href^="#"]').forEach(anchor => {
